@@ -223,6 +223,482 @@
       ],
       "inhibitors": [],
       "notes": "Selective deposition of cobalt oxide using surface functionalization"
+    },
+    "10.1021/acs.chemmater.0c00722": {
+      "id": 12,
+      "title": "Area-Selective Deposition: Fundamentals, Applications, and Future Outlook",
+      "authors": "Parsons and Clark",
+      "year": 2020,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [],
+      "inhibitors": [],
+      "notes": "Comprehensive review of area-selective deposition techniques, mechanisms, and applications"
+    },
+    "10.1021/acs.chemmater.9b01005": {
+      "id": 13,
+      "title": "From the Bottom-Up: Toward Area-Selective Atomic Layer Deposition with High Selectivity",
+      "authors": "Mackus et al.",
+      "year": 2019,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [],
+      "inhibitors": [],
+      "notes": "Review of bottom-up approaches for area-selective ALD with focus on achieving high selectivity"
+    },
+    "10.1021/acsanm.7b00330": {
+      "id": 14,
+      "title": "Area-Selective Atomic Layer Deposition of SiO2 Using Acetylacetone as a Chemoselective Inhibitor in an ABC-Type Cycle",
+      "authors": "Mameli et al.",
+      "year": 2017,
+      "growthSurfaces": [
+        { "element": "Si", "compound": "Si-H", "notes": "Selective deposition on H-terminated Si" }
+      ],
+      "nonGrowthSurfaces": [
+        { "element": "Al", "compound": "Al2O3", "notes": "Inhibition using acetylacetone" },
+        { "element": "Ti", "compound": "TiO2", "notes": "Inhibition using acetylacetone" },
+        { "element": "Hf", "compound": "HfO2", "notes": "Inhibition using acetylacetone" }
+      ],
+      "grownMaterials": [
+        { "element": "Si", "compound": "SiO2", "notes": "Selective deposition using ABC-type cycle with inhibitor" }
+      ],
+      "inhibitors": [
+        {
+          "name": "Acetylacetone (acac)",
+          "type": "SMI",
+          "target_surface": "Al2O3, TiO2, HfO2",
+          "blocked_material": "SiO2",
+          "notes": "Chemoselective inhibitor in ABC-type ALD cycle"
+        }
+      ],
+      "notes": "Demonstrates selective SiO2 deposition using acetylacetone as inhibitor in ABC-type cycle"
+    },
+    "10.1063/1.1345834": {
+      "id": 15,
+      "title": "Selective-Area Atomic Layer Epitaxy Growth of ZnO Features on Soft Lithography-Patterned Substrates",
+      "authors": "Yan et al.",
+      "year": 2001,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [
+        { "element": "Zn", "compound": "ZnO", "notes": "Selective growth on patterned substrates using soft lithography" }
+      ],
+      "inhibitors": [],
+      "notes": "Early demonstration of selective ZnO growth using patterned substrates"
+    },
+    "10.1021/acs.chemmater.8b00197": {
+      "id": 16,
+      "title": "Area-Selective Atomic Layer Deposition of TiN, TiO2, and HfO2 on Silicon Nitride with Inhibition on Amorphous Carbon",
+      "authors": "Stevens et al.",
+      "year": 2018,
+      "growthSurfaces": [
+        { "element": "Si", "compound": "Si3N4", "notes": "Selective deposition on silicon nitride" }
+      ],
+      "nonGrowthSurfaces": [
+        { "element": "C", "compound": "amorphous carbon", "notes": "Inhibition of deposition" }
+      ],
+      "grownMaterials": [
+        { "element": "Ti", "compound": "TiN", "notes": "Selective deposition on silicon nitride vs. amorphous carbon" },
+        { "element": "Ti", "compound": "TiO2", "notes": "Selective deposition on silicon nitride vs. amorphous carbon" },
+        { "element": "Hf", "compound": "HfO2", "notes": "Selective deposition on silicon nitride vs. amorphous carbon" }
+      ],
+      "inhibitors": [],
+      "notes": "Demonstrates selective deposition of multiple materials on silicon nitride with inhibition on amorphous carbon"
+    },
+    "10.1021/acs.chemmater.9b01125": {
+      "id": 17,
+      "title": "Integrated Isothermal Atomic Layer Deposition/Atomic Layer Etching Supercycles for Area-Selective Deposition of TiO2",
+      "authors": "Song et al.",
+      "year": 2019,
+      "growthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "Growth surface for TiO2 deposition" }
+      ],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [
+        { "element": "Ti", "compound": "TiO2", "notes": "Selective deposition using integrated ALD/ALE supercycles" }
+      ],
+      "inhibitors": [],
+      "notes": "Novel approach combining ALD and ALE in supercycles for area-selective deposition"
+    },
+    "10.1063/1.4983007": {
+      "id": 18,
+      "title": "Understanding Inherent Substrate Selectivity during Atomic Layer Deposition: Effect of Surface Preparation, Hydroxyl Density, and Metal Oxide Composition on Nucleation Mechanisms during Tungsten ALD",
+      "authors": "Lemaire et al.",
+      "year": 2017,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [
+        { "element": "W", "compound": "W", "notes": "Study of nucleation mechanisms for tungsten ALD" }
+      ],
+      "inhibitors": [],
+      "notes": "Investigates fundamental mechanisms of inherent substrate selectivity during tungsten ALD"
+    },
+    "10.1116/1.3670396": {
+      "id": 19,
+      "title": "Selective Atomic Layer Deposition with Electron-Beam Patterned Self-Assembled Monolayers",
+      "authors": "Huang et al.",
+      "year": 2012,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "SAM-modified surface to block deposition" }
+      ],
+      "grownMaterials": [
+        { "element": "Hf", "compound": "HfO2", "notes": "Selective deposition using e-beam patterned SAMs" }
+      ],
+      "inhibitors": [
+        {
+          "name": "Octadecyltrichlorosilane (OTS)",
+          "type": "SAM",
+          "target_surface": "SiO2",
+          "blocked_material": "HfO2",
+          "notes": "SAM patterned by e-beam to create selective deposition"
+        }
+      ],
+      "notes": "Demonstrates e-beam patterning of SAMs for selective ALD"
+    },
+    "10.1021/jp802455p": {
+      "id": 20,
+      "title": "Selective-Area Atomic Layer Deposition Using Poly(vinyl pyrrolidone) as a Passivation Layer",
+      "authors": "Färm et al.",
+      "year": 2008,
+      "growthSurfaces": [
+        { "element": "Si", "compound": "Si", "notes": "Growth surface for ALD" }
+      ],
+      "nonGrowthSurfaces": [
+        { "element": "Si", "compound": "Si", "notes": "PVP-coated surface blocks deposition" }
+      ],
+      "grownMaterials": [
+        { "element": "Ir", "compound": "Ir", "notes": "Selective deposition using PVP as passivation layer" }
+      ],
+      "inhibitors": [
+        {
+          "name": "Poly(vinyl pyrrolidone) (PVP)",
+          "type": "Polymer",
+          "target_surface": "Si",
+          "blocked_material": "Ir",
+          "notes": "Polymer passivation layer for blocking ALD"
+        }
+      ],
+      "notes": "Demonstrates use of PVP polymer as passivation layer for selective ALD"
+    },
+    "10.1116/1.4935350": {
+      "id": 21,
+      "title": "Atomic Layer Deposition of Molybdenum Oxide from (NtBu)2(NMe2)2Mo and O2 Plasma",
+      "authors": "Vos et al.",
+      "year": 2016,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [
+        { "element": "Mo", "compound": "MoOx", "notes": "ALD of molybdenum oxide using novel precursor" }
+      ],
+      "inhibitors": [],
+      "notes": "Development of ALD process for molybdenum oxide using novel precursor"
+    },
+    "10.1021/acs.chemmater.7b02456": {
+      "id": 22,
+      "title": "Low Temperature, Selective Atomic Layer Deposition of Cobalt Metal Films Using Bis(1,4-di-tert-butyl-1,3-diazadienyl)cobalt and Alkylamine Precursors",
+      "authors": "Kerrigan et al.",
+      "year": 2017,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [
+        { "element": "Co", "compound": "Co", "notes": "Selective cobalt metal deposition using novel precursor combination" }
+      ],
+      "inhibitors": [],
+      "notes": "Development of low-temperature selective ALD process for cobalt metal films"
+    },
+    "10.1116/1.573962": {
+      "id": 23,
+      "title": "Selective Deposition of Tungsten—Prediction of Selectivity",
+      "authors": "Carlsson",
+      "year": 1985,
+      "growthSurfaces": [
+        { "element": "Si", "compound": "Si", "notes": "Growth surface for selective tungsten deposition" }
+      ],
+      "nonGrowthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "Non-growth surface for tungsten deposition" }
+      ],
+      "grownMaterials": [
+        { "element": "W", "compound": "W", "notes": "Selective tungsten deposition" }
+      ],
+      "inhibitors": [],
+      "notes": "Early work on predicting selectivity for tungsten CVD"
+    },
+    "10.1080/10408439008242184": {
+      "id": 24,
+      "title": "Selective Vapor-Phase Deposition on Patterned Substrates",
+      "authors": "Carlsson",
+      "year": 1990,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [],
+      "inhibitors": [],
+      "notes": "Review of selective vapor-phase deposition techniques on patterned substrates"
+    },
+    "10.1039/c4nr01954g": {
+      "id": 25,
+      "title": "The Use of Atomic Layer Deposition in Advanced Nanopatterning",
+      "authors": "Mackus et al.",
+      "year": 2014,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [],
+      "inhibitors": [],
+      "notes": "Review of ALD applications in advanced nanopatterning"
+    },
+    "10.1116/1.4938104": {
+      "id": 26,
+      "title": "Atomic Layer Deposition on Polymer Fibers and Fabrics for Multifunctional and Electronic Textiles",
+      "authors": "Brozena et al.",
+      "year": 2016,
+      "growthSurfaces": [
+        { "element": "C", "compound": "polymer fibers", "notes": "ALD on polymer substrates" }
+      ],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [
+        { "element": "Al", "compound": "Al2O3", "notes": "ALD on polymer fibers and fabrics" },
+        { "element": "Zn", "compound": "ZnO", "notes": "ALD on polymer fibers and fabrics" }
+      ],
+      "inhibitors": [],
+      "notes": "Application of ALD to functionalize polymer fibers and fabrics"
+    },
+    "10.1149/2.0231902jss": {
+      "id": 27,
+      "title": "Selective Atomic Layer Deposition Using Ion Implantation-Based Activation",
+      "authors": "Verkuijlen et al.",
+      "year": 2019,
+      "growthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "Ion-implanted surface for selective growth" }
+      ],
+      "nonGrowthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "Non-implanted surface" }
+      ],
+      "grownMaterials": [
+        { "element": "Pt", "compound": "Pt", "notes": "Selective deposition on ion-implanted surfaces" }
+      ],
+      "inhibitors": [],
+      "notes": "Novel approach using ion implantation to activate surfaces for selective ALD"
+    },
+    "10.1021/acsnano.5b04125": {
+      "id": 28,
+      "title": "Self-Correcting Process for High Quality Patterning by Atomic Layer Deposition",
+      "authors": "Minaye Hashemi et al.",
+      "year": 2015,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "SAM-modified surface" }
+      ],
+      "grownMaterials": [
+        { "element": "Pt", "compound": "Pt", "notes": "Selective deposition with self-correcting process" }
+      ],
+      "inhibitors": [
+        {
+          "name": "Octadecyltrichlorosilane (OTS)",
+          "type": "SAM",
+          "target_surface": "SiO2",
+          "blocked_material": "Pt",
+          "notes": "SAM for blocking Pt deposition with self-correcting mechanism"
+        }
+      ],
+      "notes": "Demonstrates self-correcting process for high-quality patterning by ALD"
+    },
+    "10.1021/jp901864j": {
+      "id": 29,
+      "title": "Area-Selective ALD with Soft Lithographic Methods: Using Self-Assembled Monolayers to Direct Film Deposition",
+      "authors": "Jiang and Bent",
+      "year": 2009,
+      "growthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "Patterned growth surface" }
+      ],
+      "nonGrowthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "SAM-modified surface" }
+      ],
+      "grownMaterials": [
+        { "element": "Ti", "compound": "TiO2", "notes": "Selective deposition using soft lithographic patterning of SAMs" }
+      ],
+      "inhibitors": [
+        {
+          "name": "Octadecyltrichlorosilane (OTS)",
+          "type": "SAM",
+          "target_surface": "SiO2",
+          "blocked_material": "TiO2",
+          "notes": "SAM patterned by soft lithography"
+        }
+      ],
+      "notes": "Demonstrates area-selective ALD using soft lithographic methods to pattern SAMs"
+    },
+    "10.1021/cm503406j": {
+      "id": 30,
+      "title": "Selective Growth of Titanium Nitride on HfO2 across Nanolines and Nanopillars",
+      "authors": "Chopra et al.",
+      "year": 2016,
+      "growthSurfaces": [
+        { "element": "Hf", "compound": "HfO2", "notes": "Growth surface for TiN" }
+      ],
+      "nonGrowthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "Non-growth surface" }
+      ],
+      "grownMaterials": [
+        { "element": "Ti", "compound": "TiN", "notes": "Selective deposition on HfO2 nanostructures" }
+      ],
+      "inhibitors": [],
+      "notes": "Demonstrates selective growth of TiN on HfO2 nanostructures"
+    },
+    "10.1021/cm200139v": {
+      "id": 31,
+      "title": "Molybdenum Atomic Layer Deposition Using MoF6 and Si2H6 as the Reactants",
+      "authors": "Seghete et al.",
+      "year": 2011,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [
+        { "element": "Mo", "compound": "Mo", "notes": "ALD of molybdenum using MoF6 and Si2H6" }
+      ],
+      "inhibitors": [],
+      "notes": "Development of ALD process for molybdenum metal"
+    },
+    "10.1021/acs.chemmater.5b04360": {
+      "id": 32,
+      "title": "Using Hydrogen to Expand the Inherent Substrate Selectivity Window during Tungsten Atomic Layer Deposition",
+      "authors": "Kalanyan et al.",
+      "year": 2016,
+      "growthSurfaces": [
+        { "element": "Si", "compound": "Si", "notes": "Growth surface for selective W deposition" }
+      ],
+      "nonGrowthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "Non-growth surface" }
+      ],
+      "grownMaterials": [
+        { "element": "W", "compound": "W", "notes": "Selective deposition using hydrogen to enhance selectivity window" }
+      ],
+      "inhibitors": [],
+      "notes": "Demonstrates use of hydrogen to expand inherent substrate selectivity window during W ALD"
+    },
+    "10.1039/c2nr30760e": {
+      "id": 33,
+      "title": "Nanopatterning by Direct-Write Atomic Layer Deposition",
+      "authors": "Mackus et al.",
+      "year": 2012,
+      "growthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "Electron beam activated surface" }
+      ],
+      "nonGrowthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "Non-activated surface" }
+      ],
+      "grownMaterials": [
+        { "element": "Pt", "compound": "Pt", "notes": "Direct-write ALD using electron beam" }
+      ],
+      "inhibitors": [],
+      "notes": "Demonstrates direct-write ALD technique using electron beam activation"
+    },
+    "10.1088/0957-4484/27/40/405302": {
+      "id": 34,
+      "title": "Area-Selective Atomic Layer Deposition of Platinum Using Photosensitive Polyimide",
+      "authors": "Vervuurt et al.",
+      "year": 2016,
+      "growthSurfaces": [
+        { "element": "Si", "compound": "SiO2", "notes": "Patterned growth surface" }
+      ],
+      "nonGrowthSurfaces": [
+        { "element": "C", "compound": "polyimide", "notes": "Photosensitive polyimide blocking layer" }
+      ],
+      "grownMaterials": [
+        { "element": "Pt", "compound": "Pt", "notes": "Selective deposition using photosensitive polyimide" }
+      ],
+      "inhibitors": [
+        {
+          "name": "Photosensitive polyimide",
+          "type": "Polymer",
+          "target_surface": "SiO2",
+          "blocked_material": "Pt",
+          "notes": "Photopatternable polymer for selective ALD"
+        }
+      ],
+      "notes": "Demonstrates use of photosensitive polyimide for area-selective ALD of platinum"
+    },
+    "10.1021/cm00031a002": {
+      "id": 35,
+      "title": "Selective Metallization by Chemical Vapor Deposition",
+      "authors": "Gladfelter",
+      "year": 1993,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [],
+      "inhibitors": [],
+      "notes": "Review of selective metallization by CVD techniques"
+    },
+    "10.1002/cvde.19950010203": {
+      "id": 36,
+      "title": "Chemical Vapor Deposition of Metals: Part 2. Overview of Selective CVD of Metals",
+      "authors": "Hampden-Smith and Kodas",
+      "year": 1995,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [],
+      "inhibitors": [],
+      "notes": "Review of selective CVD techniques for metals"
+    },
+    "10.1021/jp4000473": {
+      "id": 37,
+      "title": "Pyrolysis of Titanicone Molecular Layer Deposition Films as Precursors for Conducting TiO2/Carbon Composite Films",
+      "authors": "Abdulagatov et al.",
+      "year": 2013,
+      "growthSurfaces": [],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [
+        { "element": "Ti", "compound": "TiO2/C composite", "notes": "Composite material formed by pyrolysis of MLD films" }
+      ],
+      "inhibitors": [],
+      "notes": "Demonstrates formation of TiO2/carbon composites from titanicone MLD films"
+    },
+    "10.1002/adma.201002636": {
+      "id": 38,
+      "title": "Nanoscopic Patterned Materials with Tunable Dimensions via Atomic Layer Deposition on Block Copolymers",
+      "authors": "Peng et al.",
+      "year": 2010,
+      "growthSurfaces": [
+        { "element": "C", "compound": "block copolymer", "notes": "Selective infiltration of one block" }
+      ],
+      "nonGrowthSurfaces": [
+        { "element": "C", "compound": "block copolymer", "notes": "Non-infiltrated block" }
+      ],
+      "grownMaterials": [
+        { "element": "Al", "compound": "Al2O3", "notes": "Selective infiltration into block copolymer template" }
+      ],
+      "inhibitors": [],
+      "notes": "Demonstrates nanoscopic patterning using ALD on block copolymer templates"
+    },
+    "10.1021/nn200500g": {
+      "id": 39,
+      "title": "A Route to Nanoscopic Materials via Sequential Infiltration Synthesis on Block Copolymer Templates",
+      "authors": "Peng et al.",
+      "year": 2011,
+      "growthSurfaces": [
+        { "element": "C", "compound": "block copolymer", "notes": "Selective infiltration of one block" }
+      ],
+      "nonGrowthSurfaces": [
+        { "element": "C", "compound": "block copolymer", "notes": "Non-infiltrated block" }
+      ],
+      "grownMaterials": [
+        { "element": "Al", "compound": "Al2O3", "notes": "Sequential infiltration synthesis on block copolymer template" }
+      ],
+      "inhibitors": [],
+      "notes": "Demonstrates sequential infiltration synthesis (SIS) on block copolymer templates"
+    },
+    "10.1039/c4tc02306d": {
+      "id": 40,
+      "title": "Temperature-Dependent Reaction between Trimethylaluminum and Poly(Methyl Methacrylate) during Sequential Vapor Infiltration: Experimental and Ab Initio Analysis",
+      "authors": "Dandley et al.",
+      "year": 2014,
+      "growthSurfaces": [
+        { "element": "C", "compound": "PMMA", "notes": "Polymer for vapor infiltration" }
+      ],
+      "nonGrowthSurfaces": [],
+      "grownMaterials": [
+        { "element": "Al", "compound": "Al2O3", "notes": "Infiltration of PMMA with TMA" }
+      ],
+      "inhibitors": [],
+      "notes": "Study of temperature-dependent reactions during sequential vapor infiltration"
     }
   }
 }
