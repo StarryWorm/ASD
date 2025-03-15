@@ -5,17 +5,17 @@
   --non-growth-surface-color: #F44336;
   --grown-material-color: #2196F3;
   
-  /* Element Category Colors */
-  --alkali-metal-color: #ff8a65;
-  --alkaline-earth-metal-color: #ffb74d;
-  --transition-metal-color: #90a4ae;
-  --post-transition-metal-color: #a1887f;
-  --metalloid-color: #81c784;
-  --nonmetal-color: #80cbc4;
-  --halogen-color: #9fa8da;
-  --noble-gas-color: #ce93d8;
-  --lanthanide-color: #ffcc80;
-  --actinide-color: #ffab91;
+  /* Element Category Colors - now with 50% transparency */
+  --alkali-metal-color: rgba(255, 138, 101, 0.5);
+  --alkaline-earth-metal-color: rgba(255, 183, 77, 0.5);
+  --transition-metal-color: rgba(144, 164, 174, 0.5);
+  --post-transition-metal-color: rgba(161, 136, 127, 0.5);
+  --metalloid-color: rgba(129, 199, 132, 0.5);
+  --nonmetal-color: rgba(128, 203, 196, 0.5);
+  --halogen-color: rgba(159, 168, 218, 0.5);
+  --noble-gas-color: rgba(206, 147, 216, 0.5);
+  --lanthanide-color: rgba(255, 204, 128, 0.5);
+  --actinide-color: rgba(255, 171, 145, 0.5);
 }
 
 * {
@@ -126,7 +126,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 4px;
   padding: 6px;
   cursor: pointer;
@@ -136,6 +136,18 @@ body {
   user-select: none;
   min-width: 50px;
   min-height: 50px;
+  /* Ensure crisp text rendering */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Make text dark for better readability against transparent backgrounds */
+.symbol, .name, .atomic-number {
+  color: #000;
+  font-weight: bold;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .element:hover {
@@ -174,12 +186,21 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  height: calc(100% - 6px);
 }
 
 .role-indicator {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   border-radius: 2px;
+  border: 1px solid #000;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Ensure consistent spacing even when indicators are hidden */
+.role-indicator[style*="hidden"] {
+  display: block;
+  visibility: hidden;
 }
 
 .atomic-number {
@@ -188,18 +209,21 @@ body {
   left: 3px;
   font-size: 0.8rem;
   color: #555;
+  text-align: left;
 }
 
 .symbol {
   margin-top: 18px;
   font-size: 1.4rem;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
+  padding-left: 5px;
 }
 
 .name {
   font-size: 0.7rem;
-  text-align: center;
+  text-align: left;
+  padding-left: 5px;
   margin-top: 3px;
   white-space: nowrap;
   overflow: hidden;

@@ -1,4 +1,4 @@
-// improved-main.js - Interactive Periodic Table for ASD Database
+// main.js - Interactive Periodic Table for ASD Database
 
 // Global variables
 let elementsData = [];
@@ -171,24 +171,36 @@ function createElementCell(element) {
   const indicatorsContainer = document.createElement('div');
   indicatorsContainer.className = 'role-indicators';
   
-  // Create indicators for each role
+  // Always create all three indicators in fixed positions
+  // Growth indicator (green) - always on top
+  const growthIndicator = document.createElement('div');
+  growthIndicator.className = 'role-indicator';
   if (isGrowthSurface) {
-    const growthIndicator = document.createElement('div');
-    growthIndicator.className = 'role-indicator growth-indicator';
-    indicatorsContainer.appendChild(growthIndicator);
+    growthIndicator.classList.add('growth-indicator');
+  } else {
+    growthIndicator.style.visibility = 'hidden';
   }
+  indicatorsContainer.appendChild(growthIndicator);
   
+  // Non-growth indicator (orange) - always in middle
+  const nonGrowthIndicator = document.createElement('div');
+  nonGrowthIndicator.className = 'role-indicator';
   if (isNonGrowthSurface) {
-    const nonGrowthIndicator = document.createElement('div');
-    nonGrowthIndicator.className = 'role-indicator non-growth-indicator';
-    indicatorsContainer.appendChild(nonGrowthIndicator);
+    nonGrowthIndicator.classList.add('non-growth-indicator');
+  } else {
+    nonGrowthIndicator.style.visibility = 'hidden';
   }
+  indicatorsContainer.appendChild(nonGrowthIndicator);
   
+  // Grown material indicator (blue) - always at bottom
+  const grownIndicator = document.createElement('div');
+  grownIndicator.className = 'role-indicator';
   if (isGrownMaterial) {
-    const grownIndicator = document.createElement('div');
-    grownIndicator.className = 'role-indicator grown-indicator';
-    indicatorsContainer.appendChild(grownIndicator);
+    grownIndicator.classList.add('grown-indicator');
+  } else {
+    grownIndicator.style.visibility = 'hidden';
   }
+  indicatorsContainer.appendChild(grownIndicator);
   
   elementCell.appendChild(indicatorsContainer);
   
