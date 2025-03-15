@@ -8,39 +8,37 @@
     <link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
+    <div class="main-container">
+        <div class="header-bar">
             <h1>Area-Selective Deposition Database</h1>
-            <p>Interactive database of growth surfaces, non-growth surfaces, and grown materials in ASD processes</p>
-        </div>
-    </header>
-
-    <div class="container">
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search by element, compound, or paper...">
-        </div>
-
-        <div class="legend">
-            <div class="legend-item">
-                <div class="legend-color growth-indicator"></div>
-                <span>Growth Surface</span>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search by element, compound, or paper...">
             </div>
-            <div class="legend-item">
-                <div class="legend-color non-growth-indicator"></div>
-                <span>Non-Growth Surface</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color grown-indicator"></div>
-                <span>Grown Material</span>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color growth-indicator"></div>
+                    <span>Growth Surface</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color non-growth-indicator"></div>
+                    <span>Non-Growth Surface</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color grown-indicator"></div>
+                    <span>Grown Material</span>
+                </div>
             </div>
         </div>
 
-        <div class="periodic-table" id="periodic-table">
-            <!-- Elements will be dynamically inserted here -->
-            <div class="loading-message">Loading periodic table...</div>
+        <div class="periodic-table-container">
+            <div class="periodic-table" id="periodic-table">
+                <!-- Elements will be dynamically inserted here -->
+                <div class="loading-message">Loading periodic table...</div>
+            </div>
         </div>
 
         <div class="element-details" id="element-details">
+            <!-- No close button needed when at the bottom of the page -->
             <div class="element-header">
                 <div class="element-symbol" id="detail-symbol"></div>
                 <div class="element-info">
@@ -69,11 +67,9 @@
         </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Area-Selective Deposition Database</p>
-        </div>
-    </footer>
+    <div class="footer-attribution">
+        © 2025 Area-Selective Deposition Database
+    </div>
 
     <!-- Load JavaScript files in correct order -->
     <script src="static/js/asd_database.js"></script>

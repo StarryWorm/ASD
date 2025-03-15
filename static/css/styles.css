@@ -1,80 +1,88 @@
 /* styles.css */
 :root {
+  /* ASD Role Colors */
   --growth-surface-color: #4CAF50;
   --non-growth-surface-color: #F44336;
   --grown-material-color: #2196F3;
-  --both-growth-non-growth-color: #9C27B0;
-  --both-growth-grown-color: #00BCD4;
-  --both-non-growth-grown-color: #FF9800;
-  --all-three-color: #FFEB3B;
+  
+  /* Element Category Colors */
+  --alkali-metal-color: #ff8a65;
+  --alkaline-earth-metal-color: #ffb74d;
+  --transition-metal-color: #90a4ae;
+  --post-transition-metal-color: #a1887f;
+  --metalloid-color: #81c784;
+  --nonmetal-color: #80cbc4;
+  --halogen-color: #9fa8da;
+  --noble-gas-color: #ce93d8;
+  --lanthanide-color: #ffcc80;
+  --actinide-color: #ffab91;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f5f5f5;
   color: #333;
+  overflow-x: hidden;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-header {
+.header-bar {
   background-color: #1a237e;
   color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-}
-
-header p {
-  margin: 10px 0 0;
-  font-size: 1.2em;
-}
-
-.search-bar {
-  margin: 20px 0;
+  padding: 10px 20px;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
 }
 
-.search-bar input {
-  width: 60%;
-  padding: 10px;
-  border: 1px solid #ddd;
+.header-bar h1 {
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+.search-container {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 20px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 8px 12px;
   border-radius: 4px;
-  font-size: 16px;
+  border: none;
+  font-size: 14px;
 }
 
 .legend {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 20px 0;
-  padding: 10px;
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .legend-item {
   display: flex;
   align-items: center;
-  margin: 5px 10px;
+  margin-left: 15px;
+  font-size: 0.9rem;
 }
 
 .legend-color {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
   border-radius: 3px;
 }
 
@@ -82,97 +90,154 @@ header p {
 .non-growth-indicator { background-color: var(--non-growth-surface-color); }
 .grown-indicator { background-color: var(--grown-material-color); }
 
+.periodic-table-container {
+  flex: 1;
+  padding: 10px;
+  overflow: auto;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.group-labels {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  margin-bottom: 5px;
+  padding-left: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.group-labels div {
+  text-align: center;
+}
+
 .periodic-table {
   display: grid;
   grid-template-columns: repeat(18, 1fr);
   gap: 3px;
-  margin: 20px 0;
+  padding-bottom: 20px;
+  max-width: 100%;
 }
 
 .element {
   aspect-ratio: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
+  justify-content: flex-start;
+  background-color: #ffffff;
   border-radius: 4px;
-  padding: 5px;
+  padding: 6px;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  user-select: none;
+  min-width: 50px;
+  min-height: 50px;
 }
 
 .element:hover {
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 10;
+}
+
+/* Category-based background colors */
+.alkali-metal { background-color: var(--alkali-metal-color); }
+.alkaline-earth-metal { background-color: var(--alkaline-earth-metal-color); }
+.transition-metal { background-color: var(--transition-metal-color); }
+.post-transition-metal { background-color: var(--post-transition-metal-color); }
+.metalloid { background-color: var(--metalloid-color); }
+.nonmetal { background-color: var(--nonmetal-color); }
+.halogen { background-color: var(--halogen-color); }
+.noble-gas { background-color: var(--noble-gas-color); }
+.lanthanide { background-color: var(--lanthanide-color); }
+.actinide { background-color: var(--actinide-color); }
+
+/* Empty element placeholders */
+.element.empty {
+  background-color: transparent;
+  box-shadow: none;
+  cursor: default;
+}
+
+.element.empty:hover {
+  transform: none;
 }
 
 .role-indicators {
   position: absolute;
-  top: 2px;
-  right: 2px;
+  top: 3px;
+  right: 3px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  height: calc(100% - 4px);
+  gap: 3px;
 }
 
 .role-indicator {
   width: 12px;
-  height: calc(33% - 2px);
+  height: 12px;
   border-radius: 2px;
 }
 
-.growth-position {
-  order: 1;
-}
-
-.non-growth-position {
-  order: 2;
-}
-
-.grown-position {
-  order: 3;
-}
-
-.growth-indicator { background-color: var(--growth-surface-color); }
-.non-growth-indicator { background-color: var(--non-growth-surface-color); }
-.grown-indicator { background-color: var(--grown-material-color); }
-
 .atomic-number {
   position: absolute;
-  top: 2px;
-  left: 2px;
-  font-size: 0.7em;
+  top: 3px;
+  left: 3px;
+  font-size: 0.8rem;
   color: #555;
 }
 
 .symbol {
-  font-size: 1.2em;
+  margin-top: 18px;
+  font-size: 1.4rem;
   font-weight: bold;
-  margin-top: 5px;
+  text-align: center;
 }
 
 .name {
-  font-size: 0.6em;
+  font-size: 0.7rem;
   text-align: center;
-  margin-top: 2px;
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* Lanthanide and actinide rows */
+.periodic-table-container .f-block-spacer {
+  grid-column: span 18;
+  height: 15px;
+}
+
+.periodic-table-container .f-block-label {
+  padding: 5px;
+  font-size: 0.7rem;
+  color: #666;
+  text-align: right;
+}
+
+/* Element details panel */
 .element-details {
+  width: 100%;
+  max-width: 1400px;
+  margin: 20px auto;
   background-color: white;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.2);
   display: none;
+  overflow-y: auto;
 }
 
 .element-details.active {
   display: block;
+}
+
+.close-button {
+  display: none; /* Hide close button since it's not a modal anymore */
 }
 
 .element-header {
@@ -182,26 +247,26 @@ header p {
 }
 
 .element-symbol {
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: bold;
   margin-right: 15px;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  color: white;
+  border-radius: 6px;
+  color: black;
 }
 
 .element-info h2 {
   margin: 0;
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .element-info p {
   margin: 5px 0;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .tabs {
@@ -211,13 +276,14 @@ header p {
 }
 
 .tab {
-  padding: 10px 20px;
+  padding: 8px 16px;
   cursor: pointer;
   border: 1px solid transparent;
   border-bottom: none;
   border-radius: 4px 4px 0 0;
   margin-right: 5px;
   background-color: #f5f5f5;
+  font-size: 0.9rem;
 }
 
 .tab.active {
@@ -261,6 +327,7 @@ header p {
 
 .paper-doi {
   font-family: monospace;
+  margin-bottom: 5px;
 }
 
 .paper-doi a {
@@ -278,35 +345,52 @@ header p {
 
 .compound-group h3 {
   background-color: #e0e0e0;
-  padding: 10px;
+  padding: 8px 12px;
   border-radius: 4px;
   margin-bottom: 10px;
+  font-size: 1rem;
 }
 
-footer {
+.footer-attribution {
   background-color: #1a237e;
   color: white;
   text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
+  padding: 5px 0;
+  font-size: 0.8rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.8;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .periodic-table {
-    grid-template-columns: repeat(9, 1fr);
+  .header-bar {
+    flex-direction: column;
+    align-items: stretch;
   }
   
-  .search-bar input {
-    width: 90%;
+  .header-bar h1 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .search-container {
+    margin: 10px 0;
+    max-width: none;
+  }
+  
+  .legend {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .element-details {
+    width: 95%;
   }
 }
 
 @media (max-width: 480px) {
-  .periodic-table {
-    grid-template-columns: repeat(5, 1fr);
-  }
-  
   .element-header {
     flex-direction: column;
     text-align: center;
