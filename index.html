@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area-Selective Deposition Database</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Area-Selective Deposition Database</h1>
+            <p>Interactive database of growth surfaces, non-growth surfaces, and grown materials in ASD processes</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search by element, compound, or paper...">
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color growth-indicator"></div>
+                <span>Growth Surface</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color non-growth-indicator"></div>
+                <span>Non-Growth Surface</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color grown-indicator"></div>
+                <span>Grown Material</span>
+            </div>
+        </div>
+
+        <div class="periodic-table" id="periodic-table">
+            <!-- Elements will be dynamically inserted here -->
+        </div>
+
+        <div class="element-details" id="element-details">
+            <div class="element-header">
+                <div class="element-symbol" id="detail-symbol"></div>
+                <div class="element-info">
+                    <h2 id="detail-name"></h2>
+                    <p id="detail-atomic-number"></p>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="growth-surface">Growth Surface</div>
+                <div class="tab" data-tab="non-growth-surface">Non-Growth Surface</div>
+                <div class="tab" data-tab="grown-material">Grown Material</div>
+            </div>
+
+            <div class="tab-content active" id="growth-surface-content">
+                <div id="growth-surface-papers"></div>
+            </div>
+
+            <div class="tab-content" id="non-growth-surface-content">
+                <div id="non-growth-surface-papers"></div>
+            </div>
+
+            <div class="tab-content" id="grown-material-content">
+                <div id="grown-material-papers"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Area-Selective Deposition Database</p>
+        </div>
+    </footer>
+
+    <script src="static/js/asd_data.js"></script>
+    <script src="static/js/inhibitors.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>
