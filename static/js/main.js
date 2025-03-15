@@ -2,34 +2,38 @@
 
 // Global variables
 let elementsData = [];
-let asdData = { papers: {} };
+let asdData = null;
 
 // Initialize the application
-document.addEventListener('DOMContentLoaded', () => {
-  // Load elements data
-  fetch('static/data/elements.json')
-    .then(response => response.json())
-    .then(data => {
-      elementsData = data.elements;
-      
-      // Load ASD database
-      fetch('static/data/asd_database.json')
-        .then(response => response.json())
-        .then(database => {
-          asdData = database;
-          
-          // Create the periodic table
-          createPeriodicTable();
-          
-          // Set up event listeners
-          setupEventListeners();
-          
-          // Add inhibitors tab
-          addInhibitorsTab();
-        })
-        .catch(error => console.error('Error loading ASD database:', error));
-    })
-    .catch(error => console.error('Error loading elements data:', error));
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    // Load ASD database
+    asdData = await loadAsdDatabase();
+    
+    // Load elements data
+    const elementsResponse = await fetch('static/data/elements.json');
+    if (!elementsResponse.ok) {
+      throw new Error(`Failed to load elements data: ${elementsResponse.statusText}`);
+    }
+    
+    const elementsJson = await elementsResponse.json();
+    elementsData = elementsJson.elements;
+    
+    // Create the periodic table
+    createPeriodicTable();
+    
+    // Set up event listeners
+    setupEventListeners();
+    
+    // Add inhibitors tab if the function exists
+    if (typeof addInhibitorsTab === 'function') {
+      addInhibitorsTab();
+    }
+  } catch (error) {
+    console.error('Error initializing application:', error);
+    document.getElementById('periodic-table').innerHTML = 
+      `<div class="error-message">Error loading data: ${error.message}. Please check the console for details.</div>`;
+  }
 });
 
 // Create the periodic table
@@ -230,7 +234,7 @@ function updateTabContent(tabType, symbol) {
   const contentElement = document.getElementById(`${tabType}-content`);
   const papersElement = document.getElementById(`${tabType}-papers`);
   
-  // Get papers for this element and tab type using the new DB structure
+  // Get papers for this element and tab type using the DB
   let relevantPapers = [];
   
   if (tabType === 'growth-surface') {

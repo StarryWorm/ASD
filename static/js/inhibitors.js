@@ -2,8 +2,18 @@
 
 // Add inhibitors tab to element details
 function addInhibitorsTab() {
+  // Make sure the elements container exists
   const tabsContainer = document.querySelector('.tabs');
+  if (!tabsContainer) {
+    console.error('Tabs container not found');
+    return;
+  }
+  
   const tabsContent = document.getElementById('element-details');
+  if (!tabsContent) {
+    console.error('Element details container not found');
+    return;
+  }
   
   // Add inhibitors tab
   const inhibitorsTab = document.createElement('div');
@@ -43,6 +53,10 @@ function addInhibitorsTab() {
 // Update inhibitors tab content
 function updateInhibitorsContent(symbol) {
   const inhibitorsDataElement = document.getElementById('inhibitors-data');
+  if (!inhibitorsDataElement) {
+    console.error('Inhibitors data container not found');
+    return;
+  }
   
   // Find inhibitors relevant to this element
   const relevantInhibitors = findRelevantInhibitors(symbol);
@@ -114,6 +128,12 @@ function updateInhibitorsContent(symbol) {
 
 // Find inhibitors relevant to the selected element
 function findRelevantInhibitors(symbol) {
+  // Make sure we have access to the data
+  if (!asdData || !elementsData) {
+    console.error('Required data not available');
+    return [];
+  }
+  
   const element = elementsData.find(el => el.symbol === symbol);
   if (!element) return [];
   
@@ -141,13 +161,4 @@ function findRelevantInhibitors(symbol) {
   });
   
   return relevantInhibitors;
-}
-
-// Export functions
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = {
-    addInhibitorsTab,
-    updateInhibitorsContent,
-    findRelevantInhibitors
-  };
 }

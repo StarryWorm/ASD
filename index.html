@@ -37,6 +37,7 @@
 
         <div class="periodic-table" id="periodic-table">
             <!-- Elements will be dynamically inserted here -->
+            <div class="loading-message">Loading periodic table...</div>
         </div>
 
         <div class="element-details" id="element-details">
@@ -74,7 +75,8 @@
         </div>
     </footer>
 
-    <script src="static/js/asd_data.js"></script>
+    <!-- Load JavaScript files in correct order -->
+    <script src="static/js/asd_database.js"></script>
     <script src="static/js/inhibitors.js"></script>
     <script src="static/js/main.js"></script>
 </body>
